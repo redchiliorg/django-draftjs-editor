@@ -1,0 +1,2 @@
+recursive-include draftjs_editor/templates *.html
+recursive-include draftjs_editor/static *.css *.js

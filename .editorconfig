@@ -1,0 +1,4 @@
+root = true
+
+[setup.cfg]
+indent_size = 2

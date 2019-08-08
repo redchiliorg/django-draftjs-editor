@@ -1,0 +1,24 @@
+<div style="position: absolute; z-index: -1;">
+    {% include "django/forms/widgets/textarea.html" %}
+</div>
+<script type="text/javascript">
+    'use strict';
+    (function() {
+        // Replace current script with new empty container for editor.
+        var container = document.createElement('div');
+        container.classList.add("RichEditor-root");
+        document.currentScript.replaceWith(container);
+
+        // Insert current widget input editor into fully loaded DOM tree.
+        document.addEventListener('DOMContentLoaded', function() {
+            ReactDOM.render(
+                React.createElement(
+                    Draft.EditorWidget,
+                    {{ widget.props }},
+                    document.getElementById('{{ widget.attrs.id }}')
+                ),
+                container
+            );
+        });
+    })();
+</script>

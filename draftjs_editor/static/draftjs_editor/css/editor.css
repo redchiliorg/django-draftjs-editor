@@ -1,0 +1,62 @@
+.RichEditor-root {
+  background: white;
+  border: 1px solid lightgray;
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.5rem;
+  padding: 1.5em;
+  width: 70em;
+}
+
+.RichEditor-editor {
+    border-top: 1px solid lightgray;
+    cursor: text;
+    margin-top: 0.75em;
+}
+
+.RichEditor-editor .public-DraftEditorPlaceholder-root,
+.RichEditor-editor .public-DraftEditor-content {
+    margin: 0 -1em -1em;
+    padding: 1em;
+}
+
+.RichEditor-editor .public-DraftEditor-content {
+    font-size: 1.65em;
+    min-height: 17em;
+}
+
+.RichEditor-editor .public-DraftEditor-content h1,
+.RichEditor-editor .public-DraftEditor-content h2,
+.RichEditor-editor .public-DraftEditor-content h3,
+.RichEditor-editor .public-DraftEditor-content h4,
+.RichEditor-editor .public-DraftEditor-content h5,
+.RichEditor-editor .public-DraftEditor-content h6 {
+    background: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.RichEditor-editor .public-DraftStyleDefault-pre {
+    background-color: rgba(0, 0, 0, 0.025);
+    font-family: monospace;
+    padding: 20px;
+}
+
+.RichEditor-controls {
+    font-size: 1.75em;
+    user-select: none;
+}
+
+.RichEditor-styleButton {
+    color: gray;
+    cursor: pointer;
+    line-height: 2;
+    margin: 0 0.5em;
+}
+
+.RichEditor-styleButton:hover,
+.RichEditor-activeButton {
+    color: blue;
+    opacity: 0.5;
+}
