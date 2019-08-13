@@ -1,7 +1,8 @@
 import json
 
-from django.utils.safestring import mark_safe
+from django.conf import settings
 from django.forms.widgets import Textarea
+from django.utils.safestring import mark_safe
 
 
 class Editor(Textarea):
@@ -45,18 +46,30 @@ class Editor(Textarea):
     class Media:
         css = {
             "all": [
-                'https://unpkg.com/draft-js@0.11.0/dist/Draft.css',
-                'draftjs_editor/css/editor.css'
+                'draftjs_editor/Draft.css',
+                'draftjs_editor/draftjs_editor.css'
             ]
         }
         js = [
-            'https://unpkg.com/react@16.8.6/umd/react.development.js',
-            'https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js',
-            'https://unpkg.com/immutable@3.7.4/dist/immutable.js',
-            'https://unpkg.com/draft-js@0.11.0/dist/Draft.js',
-            'draftjs_editor/js/StyleButton.js',
-            'draftjs_editor/js/StyleControls.js',
-            'draftjs_editor/js/EditorWidget.js'
+            'draftjs_editor/react.development.js'
+            if settings.DEBUG else
+            'draftjs_editor/react.production.min.js',
+
+            'draftjs_editor/react-dom.development.js'
+            if settings.DEBUG else
+            'draftjs_editor/react-dom.production.min.js',
+
+            'draftjs_editor/immutable.js'
+            if settings.DEBUG else
+            'draftjs_editor/immutable.min.js',
+
+            'draftjs_editor/Draft.js'
+            if settings.DEBUG else
+            'draftjs_editor/Draft.min.js',
+
+            'draftjs_editor/StyleButton.js',
+            'draftjs_editor/StyleControls.js',
+            'draftjs_editor/EditorWidget.js'
         ]
 
 
