@@ -1,0 +1,2 @@
+Django>=2.0
+draftjs-exporter>=2.1.0
