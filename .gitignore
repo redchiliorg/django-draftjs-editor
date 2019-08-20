@@ -5,6 +5,10 @@ __pycache__
 */settings/local.py
 /static/
 .coverage
+.coverage.xml
+.pytest_cache
+.eggs
+*.egg-info
 *.sql
 
 # IDE
@@ -21,3 +25,4 @@ venv/
 /dist/
 pike.egg-info/
 node_modules/
+package-lock.json
